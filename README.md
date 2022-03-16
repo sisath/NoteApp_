@@ -42,26 +42,20 @@ method that would fix that, an async could be created to check for that.
 
 
 #Screenshots showing your postman requests and the output from the API. Screenshots of your database to prove that data is being persisted.
-
-![PostReq](https://paste.pics/GD3O1)
-
-![GetReq](https://paste.pics/GD3OH)
-
-![UpdReq](https://paste.pics/GD3ON)
-
-![DeleteReq](https://paste.pics/GD3P0)
-
-#Screenshot of your test results, including coverage report.
-
-![NoteController](https://paste.pics/GDNXJ)
-
-![RepoController](https://paste.pics/GDNXP)
-
-#Link to Jira Board - You must add your trainer(s) as collaborators also.
-
-![Jira1](https://paste.pics/GDNXU)
-
-![Jira2](https://paste.pics/GDNY1)
+  
+![PostRequest](https://github.com/sisath/NoteApp_/blob/main/Documentation/CRUD_Function/PostReq.png?raw=true)
+![UpdateRequest](https://github.com/sisath/NoteApp_/blob/main/Documentation/CRUD_Function/UpdReq.png?raw=true)
+![DeleteRequest](https://github.com/sisath/NoteApp_/blob/main/Documentation/CRUD_Function/DelReq.png?raw=true)
+![GetRequest](https://github.com/sisath/NoteApp_/blob/main/Documentation/CRUD_Function/GetReq.png?raw=true)
+![DataBase](https://github.com/sisath/NoteApp_/blob/main/Documentation/CRUD_Function/DB.png?raw=true)
+  
+![CoverageReportController](https://github.com/sisath/NoteApp_/blob/main/Documentation/Coverage_Report/CoverageReportController.png?raw=true)
+![CoverageReportRepo](https://github.com/sisath/NoteApp_/blob/main/Documentation/Coverage_Report/CoverageReportRepo.png?raw=true)
+  
+![ERDDiagramNotes](https://github.com/sisath/NoteApp_/blob/main/Documentation/ERDDiagram/ERDDiagramNotes.png?raw=true)
+  
+![JiraBacklog](https://github.com/sisath/NoteApp_/blob/main/Documentation/Jira/JiraBacklog.png?raw=true)
+![JiraProjectComplete](https://github.com/sisath/NoteApp_/blob/main/Documentation/Jira/JiraProjectComplete.png?raw=true)
 
 https://sisoathc.atlassian.net/jira/software/projects/NOTE/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiOGQ1ZTRhNWU1OGVkNGJjZTgzODQ4NDhiYjVmYWVkMGQiLCJwIjoiaiJ9
 
