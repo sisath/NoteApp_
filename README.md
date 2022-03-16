@@ -11,7 +11,7 @@ https://start.spring.io/ in order to generate my Spring Boot project. Underneath
 
 1. **Clone the application**
 
-`git clone https://github.com/sisath/NoteApp_.git`.
+`git clone https://github.com/sisath/NoteApp_.git`
 
 2. **Create mySQL database and set the configurations**
 
