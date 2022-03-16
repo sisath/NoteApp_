@@ -9,29 +9,11 @@ https://start.spring.io/ in order to generate my Spring Boot project. Underneath
 
 ![Spring_Initializr](https://github.com/sisath/NoteApp_/blob/main/Documentation/Spring_Initializr/spring_initializr.png?raw=true)
 
-1. **Clone the project**
+1. **Clone the application**
 
-Create a folder on your PC where you'd like to save the project. Once created, right click inside the folder and clone the project using `git clone https://github.com/sisath/NoteApp_.git`.
+`git clone https://github.com/sisath/NoteApp_.git`.
 
-
-2. **Opening the project**
-
-Open your choice of IDE and click on `File -> Open` and navigate to the folder where you have cloned the project.
-
-
-3. **Configure your application.properties found in src/main/resources:**
-
-`spring.jpa.hibernate.ddl-auto=update`
-
-`spring.datasource.url=jdbc:mysql://localhost:3306/"dataBaseName"`
-
-`spring.datasource.usertitle="yourUserName"`
-
-`spring.datasource.password="yourPassword"`
-
-`spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver`
-
-4. **Create mySQL Database and set the following configurations so you would be able to connect to the DB.**
+2. **Create mySQL database and set the configurations**
 
 `drop database if exists "dataBaseName";`
 
@@ -47,6 +29,23 @@ Open your choice of IDE and click on `File -> Open` and navigate to the folder w
 
 `FLUSH PRIVILEGES;`
 
+3. **Configure your application.properties found in src/main/resources:**
+
+`spring.jpa.hibernate.ddl-auto=update`
+
+`spring.datasource.url=jdbc:mysql://localhost:3306/"dataBaseName"`
+
+`spring.datasource.usertitle="yourUserName"`
+
+`spring.datasource.password="yourPassword"`
+
+`spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver`
+
+
+4. **Opening the application**
+
+Open your choice of IDE and click on `File -> Open` and navigate to the folder where you have cloned the project.
+
 
 5. **Run the Application via `src/main/java/NoteAppApplication.java` and click on the `Run` (Shift +F10) button in the top right corner; and you'll be able to see that `Tomcat has successfully initialised with port(s): 8080 (http)`.**
 
@@ -56,7 +55,7 @@ Post Request - `localhost:8080/api/v1/notes, by passing "title":"titleHere" and 
 
 Get Request - `localhost:8080/api/v1/notes`
 
-Put Request - `localhost:8080/api/v1/notes/"id of note you'd like to update"` (localhost:8080/api/v1/notes/1) for example
+Put Request - `localhost:8080/api/v1/notes/"id of note you'd like to update"` 
 
 Delete Request - `localhost:8080/api/v1/notes/"id of note you'd like to delete"`
 
@@ -78,22 +77,22 @@ user interface (UI).
 
 # **What went well? / What didn't go as planned?**
 
-In general, everything has gone well in the end, however there were many
-obstacles along the way, one such example being "warning: adding embedded git repository: extractor/annotator-server
-hint: You've added another git repository inside your current repository...". I resolved the issue by
+In general, everything has gone well in the end, I have managed to produce a fully functioning API and have managed to achieve 100% test coverage, however there were many
+obstacles along the way, one such example being `warning: adding embedded git repository: extractor/annotator-server
+hint: You've added another git repository inside your current repository...`. I resolved the issue by
 committing/pushing to a brand-new repository and deleting the mixed repository. In Angular, I have faced an
 issue where my variables were undefined, because the observable did not finish. I have resolved it by
 creating a separate function and called it inside the subscription. I have also struggled with refreshing
 components in Angular; fixed by adding a function to reload the same component instead of reloading the entire
 page. Another issue occurred that the table in SQL was not being updated because the model wasn't updated
 after the API call; fixed by "reload"-ing the table by querying the backend again. Another issue was
-"No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor"; fixed by adding
-"spring.jackson.serialization.fail-on-empty-beans=false" in the application.properties file. Another issue being
-"Property '...' has no initializer and is not definitely assigned in the constructor"; have fixed it by
-going into the tsconfig.json file and setting the "strictPropertyInitialization" from "true" to "false". 
-Moreover, while trying to set uo my SQL database, I received the message "Access denied for user 'test'@'localhost' 
-(using password: YES) except root user"; I resolved the issue by 
-GRANT <privileges> ON database.* TO 'user'@'localhost' IDENTIFIED BY 'password'; in SQL.  
+`No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor`; fixed by adding
+`spring.jackson.serialization.fail-on-empty-beans=false` in the `application.properties` file. Another issue being
+`Property '...' has no initializer and is not definitely assigned in the constructor`; have fixed it by
+going into the `tsconfig.json` file and setting the `strictPropertyInitialization` from `true` to `false`. 
+Moreover, while trying to set uo my SQL database, I received the message `Access denied for user 'test'@'localhost' 
+(using password: YES) except root user`; I resolved the issue by 
+`GRANT <privileges> ON database.* TO 'user'@'localhost' IDENTIFIED BY 'password'`; in SQL.  
 
 # **Possible improvements for future revisions of the project.**
   
