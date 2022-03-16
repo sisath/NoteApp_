@@ -39,9 +39,9 @@ Open your choice of IDE and click on `File -> Open` and navigate to the folder w
 
 `select Host, User from mysql.user;`
 
-`select * from "dataBaseName"."tableName;`
+`select * from "dataBaseName"."tableName";`
 
-`CREATE USER 'YourUsername'@'localhost' IDENTIFIED BY 'pass';`
+`CREATE USER 'YourUsername'@'localhost' IDENTIFIED BY 'yourPassword';`
 
 `GRANT ALL PRIVILEGES ON * . * TO 'YourUsername'@'localhost';`
 
