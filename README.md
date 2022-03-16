@@ -11,55 +11,54 @@ https://start.spring.io/ in order to generate my Spring Boot project. Underneath
 
 1. **Clone the project**
 
-Create a folden on your PC where you'd like to save the project. Once created, right click inside the folder and clone the project using "git clone https://github.com/sisath/NoteApp_.git".
+Create a folder on your PC where you'd like to save the project. Once created, right click inside the folder and clone the project using `git clone https://github.com/sisath/NoteApp_.git`.
 
 
 2. **Opening the project**
 
-Open your choice of IDE and click on File -> Open and navigate to the folder where you have cloned the project.
+Open your choice of IDE and click on `File -> Open` and navigate to the folder where you have cloned the project.
 
 
 3. **Configure your application.properties found in src/main/resources:**
 
-spring.jpa.hibernate.ddl-auto=update
+`spring.jpa.hibernate.ddl-auto=update`
 
-spring.datasource.url=jdbc:mysql://localhost:3306/"dataBaseName"
+`spring.datasource.url=jdbc:mysql://localhost:3306/"dataBaseName"`
 
-spring.datasource.usertitle="yourUserName"
+`spring.datasource.usertitle="yourUserName"`
 
-spring.datasource.password="yourPassword"
+`spring.datasource.password="yourPassword"`
 
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+`spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver`
 
 4. **Create mySQL Database and set the following configurations so you would be able to connect to the DB.**
 
-drop database if exists note_db;
+`drop database if exists note_db;`
 
-create database if not exists note_db;
+`create database if not exists note_db;`
 
-select Host, User from mysql.user;
+`select Host, User from mysql.user;`
 
-select * from note_db.notes;
+`select * from note_db.notes;`
 
-CREATE USER 'YourUsername'@'localhost' IDENTIFIED BY 'pass';
+`CREATE USER 'YourUsername'@'localhost' IDENTIFIED BY 'pass';`
 
-GRANT ALL PRIVILEGES ON * . * TO 'YourUsername'@'localhost';
+`GRANT ALL PRIVILEGES ON * . * TO 'YourUsername'@'localhost';`
 
-FLUSH PRIVILEGES;
+`FLUSH PRIVILEGES;`
 
 
-5. **Run the Application via src/main/java/NoteAppApplication.java and click on the "Run" (Shift +F10) button in the top right corner; and you'll be able to see that Tomcat has successfully initialised with port(s): 8080 (http).**
+5. **Run the Application via `src/main/java/NoteAppApplication.java` and click on the `Run` (Shift +F10) button in the top right corner; and you'll be able to see that `Tomcat has successfully initialised with port(s): 8080 (http)`.**
 
 6. **Explore the API's functionality using Postman.**
 
-Post Request - localhost:8080/api/v1/notes, by passing "title":"titleHere" and "body":"bodyHere" 
+Post Request - `localhost:8080/api/v1/notes, by passing "title":"titleHere" and "body":"bodyHere"` 
 
-Get Request - localhost:8080/api/v1/notes
+Get Request - `localhost:8080/api/v1/notes`
 
-Put Request - localhost:8080/api/v1/notes/"id of note you'd like to update" (localhost:8080/api/v1/notes/1) for example
+Put Request - `localhost:8080/api/v1/notes/"id of note you'd like to update"` (localhost:8080/api/v1/notes/1) for example
 
-Delete Request - localhost:8080/api/v1/notes/"id of note you'd like to delete"
-
+Delete Request - `localhost:8080/api/v1/notes/"id of note you'd like to delete"`
 
 
 
