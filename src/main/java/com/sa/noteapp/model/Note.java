@@ -1,27 +1,27 @@
 package com.sa.noteapp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Data
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 @Table(name="notes")
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long noteId;
-    private String noteTitle;
-    private String noteBody;
-    private Date noteCreatedDate;
-    private Date noteUpdatedDate;
+    private String title;
+    private String body;
 
-    public Note(String noteTitle, String noteBody, Date noteCreatedDate, Date noteUpdatedDate) {
-        this.noteTitle = noteTitle;
-        this.noteBody = noteBody;
-        this.noteCreatedDate = noteCreatedDate;
-        this.noteUpdatedDate = noteUpdatedDate;
+    public Note(String title, String body) {
+        this.title = title;
+        this.body = body;
     }
 }

@@ -1,4 +1,4 @@
-package com.sa.noteapp.dao;
+package com.sa.noteapp.repo;
 
 import com.sa.noteapp.model.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
