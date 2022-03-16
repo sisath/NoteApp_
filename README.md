@@ -33,13 +33,13 @@ Open your choice of IDE and click on `File -> Open` and navigate to the folder w
 
 4. **Create mySQL Database and set the following configurations so you would be able to connect to the DB.**
 
-`drop database if exists note_db;`
+`drop database if exists "dataBaseName";`
 
-`create database if not exists note_db;`
+`create database if not exists "dataBaseName";`
 
 `select Host, User from mysql.user;`
 
-`select * from note_db.notes;`
+`select * from "dataBaseName"."tableName;`
 
 `CREATE USER 'YourUsername'@'localhost' IDENTIFIED BY 'pass';`
 
