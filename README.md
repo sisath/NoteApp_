@@ -72,36 +72,25 @@ as the middle man, they are between the database and front-end.
 
 I am expecting to encounter many challenges along the way, I am not expecting
 this to be an easy task, however I am confident that I am going to be able to
-resolve most, if not all, of the issues and produce a fully working API with a
-user interface (UI).
+resolve most, if not all, of the issues and produce a fully working API.
 
 # **What went well? / What didn't go as planned?**
 
-In general, everything has gone well in the end, I have managed to produce a fully functioning API and have managed to achieve 100% test coverage, however there were many
-obstacles along the way, one such example being `warning: adding embedded git repository: extractor/annotator-server
-hint: You've added another git repository inside your current repository...`. I resolved the issue by
-committing/pushing to a brand-new repository and deleting the mixed repository. In Angular, I have faced an
-issue where my variables were undefined, because the observable did not finish. I have resolved it by
-creating a separate function and called it inside the subscription. I have also struggled with refreshing
-components in Angular; fixed by adding a function to reload the same component instead of reloading the entire
-page. Another issue occurred that the table in SQL was not being updated because the model wasn't updated
-after the API call; fixed by "reload"-ing the table by querying the backend again. Another issue was
-`No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor`; fixed by adding
-`spring.jackson.serialization.fail-on-empty-beans=false` in the `application.properties` file. Another issue being
-`Property '...' has no initializer and is not definitely assigned in the constructor`; have fixed it by
-going into the `tsconfig.json` file and setting the `strictPropertyInitialization` from `true` to `false`. 
-Moreover, while trying to set uo my SQL database, I received the message `Access denied for user 'test'@'localhost' 
-(using password: YES) except root user`; I resolved the issue by 
-`GRANT <privileges> ON database.* TO 'user'@'localhost' IDENTIFIED BY 'password'`; in SQL.  
+In general, everything has gone well in the end, I have managed to produce an API with fully functioning CRUD functionality. While doing my tests I have encountered many 
+different errors, but in the end I have achieved 100% test coverage. There were also many other obstacles along the way, I will give several examples below.
+
+`warning: adding embedded git repository: extractor/annotator-server hint: You've added another git repository inside your current repository...` I resolved the issue by
+committing/pushing to a brand-new repository and deleting the mixed repository. 
+
+Another issue occurred that the table in SQL was not being updated because the model wasn't updated after the API call; fixed by "reload"-ing the table by querying the backend again. 
+
+Moreover, while trying to set uo my SQL database, I received the message `Access denied for user 'test'@'localhost' (using password: YES) except root user`; I resolved the issue by `GRANT <privileges> ON database.* TO 'user'@'localhost' IDENTIFIED BY 'password'` in SQL.  
+
+The error that ended up being the most problematic was `java.lang.AssertionError: No value at JSON path "$"` I managed to fix it by printing my response with `andDo(print())`
 
 # **Possible improvements for future revisions of the project.**
-  
-While creating the UI(Not App) for the Note App API there was a rather noticeable
-bug which I couldn't resolve at the time. It was an issue that the UI might not
-automatically refresh the page so that the Create and Update CRUD functionality
-wouldn't get updated at the same time, you would need to refresh the website (F5)
-so the changes would take place. A possible improvement would be to implement a
-method that would fix that, an async could be created to check for that.
+ 
+ A more advanced User Interface (UI) can be added, for example with hashtags, as well as more exceptions.
 
 
 # **Screenshots showing your postman requests and the output from the API. Screenshots of your database to prove that data is being persisted.**
